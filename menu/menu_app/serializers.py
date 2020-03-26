@@ -7,6 +7,12 @@ class MenuItemSerializer(serializers.ModelSerializer):
         model = MenuItem
         fields = ['name', 'item_id', 'category', 'description', 'thumbnail']
 
+    def create(self, validated_data):
+        pk = self.context.get('pk')
+        item, _ = MenuItem.objects.update_or_create(pk=pk,
+                                                    defaults=validated_data)
+        return item
+
 
 class MenuItemListSerializer(MenuItemSerializer):
     category = serializers.StringRelatedField()
