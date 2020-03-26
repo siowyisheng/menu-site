@@ -2,6 +2,8 @@
 
 A simple menu site.
 
+You can use the existing admin account, username is yisheng and password is hunter2 (not my real password).
+
 ## Installing prerequisites
 
 Run `pip install -r requirements.txt` (preferably in a virtualenv).
