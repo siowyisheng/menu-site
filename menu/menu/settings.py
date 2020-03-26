@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'frontend.apps.FrontendConfig',
     'menu_app.apps.MenuAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',

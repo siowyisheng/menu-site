@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from menu_app import views
 
 urlpatterns = [
+    path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
     path('menu/', views.ItemsList.as_view()),
     path('menu/<int:pk>/', views.ItemsList.as_view()),
